@@ -4,6 +4,12 @@ public class CuentaCorriente {
     String dni, nombre;
     double saldo;
     
+    CuentaCorriente (String dni, String nombre) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.saldo = 0;
+    }
+    
     void sacarDinero (double cantidad) {
         if (saldo == 0) {
             System.out.println("No hay suficiente saldo");
@@ -38,9 +44,7 @@ public class CuentaCorriente {
     // · Sacar dinero: el método debe indicar si ha sido posible llevar a cabo la operación, si existe saldo suficiente.
     // · Ingresar dinero: se incrementa el saldo.
     // · Mostrar información: muestra la información disponible de la cuenta corriente.
-        CuentaCorriente c = new CuentaCorriente();
-        c.nombre = "Oleksandr";
-        c.dni = "Y4693836X";
+        CuentaCorriente c = new CuentaCorriente("Y4693836X", "Oleksandr");
         
         c.ingresarDinero(1000);
         c.mostrarDatosCuenta();
