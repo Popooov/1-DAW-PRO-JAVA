@@ -10,6 +10,17 @@ public class CuentaCorriente {
         this.saldo = 0;
     }
     
+    CuentaCorriente (String dni, double saldo) {
+        this.dni = dni;
+        this.saldo = 0;
+    }
+    
+    CuentaCorriente (String dni, String nombre, double saldo) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.saldo = 0;
+    }
+    
     void sacarDinero (double cantidad) {
         if (saldo == 0) {
             System.out.println("No hay suficiente saldo");
@@ -32,7 +43,9 @@ public class CuentaCorriente {
     }
     
     void mostrarDatosCuenta () {
-        System.out.println("Nombre de titular: " + nombre);
+        if (nombre != null) {
+            System.out.println("Nombre de titular: " + nombre);
+        }
         System.out.println("DNI de titular: " + dni);
         System.out.println("El saldo de la cuenta es: " + saldo);
     }
@@ -50,5 +63,21 @@ public class CuentaCorriente {
         c.mostrarDatosCuenta();
         c.sacarDinero(100);
         c.mostrarDatosCuenta();
+        
+        System.out.println("");
+        
+        CuentaCorriente c2 = new CuentaCorriente("Y4693836X", 500);
+        c2.ingresarDinero(500);
+        c2.mostrarDatosCuenta();
+        c2.sacarDinero(100);
+        c2.mostrarDatosCuenta();
+        
+        System.out.println("");
+        
+        CuentaCorriente c3 = new CuentaCorriente("Y4693836X", "Oleksandr", 500);
+        c3.ingresarDinero(1000);
+        c3.mostrarDatosCuenta();
+        c3.sacarDinero(100);
+        c3.mostrarDatosCuenta();
     }
 }
