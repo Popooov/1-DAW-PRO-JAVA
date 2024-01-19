@@ -56,7 +56,7 @@ public class CuentaCorriente {
         return banco;
     }
 
-    public static void setBanco(String banco) {
-        CuentaCorriente.banco = banco;
+    public static void setBanco(String nuevoBanco) {
+        banco = nuevoBanco;
     }
 }
