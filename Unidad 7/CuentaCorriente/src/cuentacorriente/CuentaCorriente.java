@@ -52,11 +52,11 @@ public class CuentaCorriente {
         System.out.println("El saldo de la cuenta es: " + saldo);
     }
 
-    public static String getBanco() {
+    static String getBanco() {
         return banco;
     }
 
-    public static void setBanco(String nuevoBanco) {
+    static void setBanco(String nuevoBanco) {
         banco = nuevoBanco;
     }
 }
