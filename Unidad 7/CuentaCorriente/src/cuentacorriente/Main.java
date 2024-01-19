@@ -30,5 +30,11 @@ public class Main {
         c3.mostrarDatosCuenta();
         c3.sacarDinero(100);
         c3.mostrarDatosCuenta();
+        
+        // Para comprobar la visibilidad de los atributos:
+        CuentaCorriente c4 = new CuentaCorriente("Y4693836X", "Oleksandr", 500);
+        System.out.println(c4.dni + ", el dni es visible para las clases vecinas");
+        System.out.println(c4.nombre + ", el nombre es visible para las clases vecinas y externas");
+        // no se puede acceder al atributo saldo porque es privado
     }
 }

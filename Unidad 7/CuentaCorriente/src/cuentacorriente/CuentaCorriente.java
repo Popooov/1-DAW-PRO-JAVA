@@ -1,8 +1,9 @@
 package cuentacorriente;
 
 public class CuentaCorriente {
-    String dni, nombre;
-    double saldo;
+    String dni; 
+    public String nombre;
+    private double saldo;
     
     CuentaCorriente (String dni, String nombre) {
         this.dni = dni;
