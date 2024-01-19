@@ -4,6 +4,7 @@ public class CuentaCorriente {
     String dni; 
     public String nombre;
     private double saldo;
+    static String banco = "Santander";
     
     CuentaCorriente (String dni, String nombre) {
         this.dni = dni;
@@ -50,5 +51,12 @@ public class CuentaCorriente {
         System.out.println("DNI de titular: " + dni);
         System.out.println("El saldo de la cuenta es: " + saldo);
     }
-    
+
+    public static String getBanco() {
+        return banco;
+    }
+
+    public static void setBanco(String banco) {
+        CuentaCorriente.banco = banco;
+    }
 }
