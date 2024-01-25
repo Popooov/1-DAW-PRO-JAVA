@@ -12,12 +12,12 @@ public class Gestor {
     }
     
     public Gestor(String nombre, int telefono) {
-        this(nombre, telefono, 10.000);
+        this(nombre, telefono, 10000.0);
     }
     
     void mostrarInfo() {
-        System.out.println("Nombre del gestor: " + nombre);
-        System.out.println("Teléfono del gestor " + telefono);
+        System.out.println("Nombre de gestor: " + nombre);
+        System.out.println("Teléfono de gestor " + telefono);
         System.out.println("El importe máximo autorizado por operación: " + importeMaximoAutorizado);
     }
     

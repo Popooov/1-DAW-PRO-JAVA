@@ -3,8 +3,9 @@ package cuentacorriente;
 public class CuentaCorriente {
     String dni; 
     public String nombre;
-    private double saldo;
+    private double saldo = 0;
     static String banco = "Santander";
+    Gestor gestor;
     
     CuentaCorriente (String dni, String nombre) {
         this.dni = dni;
@@ -14,13 +15,20 @@ public class CuentaCorriente {
     
     CuentaCorriente (String dni, double saldo) {
         this.dni = dni;
-        this.saldo = 0;
+        this.saldo = saldo;
     }
     
     CuentaCorriente (String dni, String nombre, double saldo) {
         this.dni = dni;
         this.nombre = nombre;
-        this.saldo = 0;
+        this.saldo = saldo;
+    }
+    
+    CuentaCorriente (String dni, String nombre, double saldo, Gestor g) {
+        this.dni = dni;
+        this.nombre = nombre;
+        this.saldo = saldo;
+        this.gestor = g;
     }
     
     void sacarDinero (double cantidad) {
@@ -50,6 +58,7 @@ public class CuentaCorriente {
         }
         System.out.println("DNI de titular: " + dni);
         System.out.println("El saldo de la cuenta es: " + saldo);
+        this.gestor.mostrarInfo();
     }
 
     static String getBanco() {
