@@ -1,6 +1,6 @@
 package calendario;
 
-public class MainCalendario {
+public class Main {
     public static void main(String[] args) {
         // Diseña la clase Calendario que representa una fecha concreta (año, mes y día). La clase debe disponer de los métodos:
 
