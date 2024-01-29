@@ -54,13 +54,12 @@ public class Punto {
     }
     
     double distanciaEuclidea(Punto otro) {
-        double calcucarDistancia = Math.cbrt(Math.exp(otro.x - this.x) + Math.exp(otro.y - this.y));
+        double calcucarDistancia = Math.sqrt(Math.pow(x - otro.x, 2) + Math.pow(y - otro.y, 2));
         System.out.println(calcucarDistancia);
         return calcucarDistancia;
     }
     
     void muestra() {
-        System.out.println("x: " + this.x);
-        System.out.println("y: " + this.y);
+        System.out.println("x: " + this.x + ", " + "y: " + this.y);
     }
 }
