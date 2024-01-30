@@ -14,11 +14,21 @@ public class Hora {
     }
     
     boolean setHora(int valor) {
-        return !(valor < 0 || valor > 23);
+        if (valor < 0 || valor > 23) {
+            return false;
+        } else {
+            this.hora = valor;
+            return true;
+        }
     }
     
     boolean setMinutos(int valor) {
-        return !(valor < 0 || valor > 59);
+        if (valor < 0 || valor > 23) {
+            return false;
+        } else {
+            this.minuto = valor;
+            return true;
+        }
     }
     
     @Override
