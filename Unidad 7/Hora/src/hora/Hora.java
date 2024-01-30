@@ -20,4 +20,9 @@ public class Hora {
     boolean setMinutos(int valor) {
         return !(valor < 0 || valor > 59);
     }
+    
+    @Override
+    public String toString() {
+        return "Hora - " + hora + ":" + minuto;
+    }
 }
