@@ -17,7 +17,7 @@ public class Hora {
         if (valor < 0 || valor > 23) {
             return false;
         } else {
-            this.hora = valor;
+            hora = valor;
             return true;
         }
     }
@@ -26,7 +26,7 @@ public class Hora {
         if (valor < 0 || valor > 23) {
             return false;
         } else {
-            this.minuto = valor;
+            minuto = valor;
             return true;
         }
     }
