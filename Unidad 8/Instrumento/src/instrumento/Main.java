@@ -6,6 +6,11 @@ public class Main {
         Piano p = new Piano();
         Campana c = new Campana();
         
+        p.add(NotasMusicales.FA);
+        p.add(NotasMusicales.RE);
+        p.add(NotasMusicales.LA);
+        p.add(NotasMusicales.RE);
+        
         p.interpretar();
         c.interpretar();
     }
