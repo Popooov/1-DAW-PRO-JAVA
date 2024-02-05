@@ -11,6 +11,11 @@ public class Main {
         p.add(NotasMusicales.LA);
         p.add(NotasMusicales.RE);
         
+        c.add(NotasMusicales.DO);
+        c.add(NotasMusicales.LA);
+        c.add(NotasMusicales.RE);
+        c.add(NotasMusicales.DO);
+        
         p.interpretar();
         c.interpretar();
     }
