@@ -22,4 +22,15 @@ public class Punto3D extends Punto {
     public String toString() {
         return super.toString() + ", " + "z: " + this.z;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        Punto3D p3d = (Punto3D) o;
+        boolean iguales = false;
+        if (super.equals(o) && (p3d.z == this.z)) {
+            iguales = true;
+        }
+        
+        return iguales;
+    }
 }

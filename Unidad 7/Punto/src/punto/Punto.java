@@ -48,4 +48,13 @@ public class Punto {
     public String toString() {
         return "x: " + this.x + ", " + "y: " + this.y;
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        Punto otroPunto = (Punto) o;
+        boolean iguales;
+        iguales = this.x == otroPunto.x && this.y == otroPunto.y;
+        
+        return iguales;
+    }
 }
