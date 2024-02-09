@@ -3,6 +3,13 @@ package poligono;
 public class Main {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+        Triangulo t = new Triangulo(20, 60);
+        Rectangulo r = new Rectangulo(15, 10);
+        
+        System.out.println(t);
+        t.area();
+        
+        System.out.println(r);
+        r.area();
     }
 }
