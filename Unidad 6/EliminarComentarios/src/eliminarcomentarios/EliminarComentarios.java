@@ -13,7 +13,7 @@ public class EliminarComentarios {
         // if (a==3) /* igual a tres */
         //      a++; /* incrementamos a */
         // Salida: if (a==3) a++;
-        int startOfComment = 0, endOfComment = 0;
+        char startOfComment, endOfComment = 0;
         String sentencia = """
                             if (a==3) /* igual a tres */
                                 a++; /* incrementamos a */""";
@@ -21,11 +21,12 @@ public class EliminarComentarios {
         for (int i = 0; i < sentencia.length(); i++) {
             System.out.print(sentencia.charAt(i));
             if (sentencia.charAt(i) == '/') {
-                startOfComment = sentencia.indexOf('/');
+                startOfComment = (char) sentencia.indexOf('/');
+                System.out.println(startOfComment);
             }
         }
         
-        System.out.println(startOfComment);
+//        System.out.println(startOfComment);
         System.out.println(endOfComment);
 //        System.out.println(sentencia.indexOf('/'));
 //        System.out.println(sentencia.length());
