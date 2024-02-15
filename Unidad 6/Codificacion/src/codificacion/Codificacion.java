@@ -12,6 +12,8 @@ public class Codificacion {
         // Un ejemplo: la palabra «PaquiTo» se codifica como «matqvko».
         // Realizar un programa que codifique un texto. Para ello implementar la siguiente función:
         // char codifica(char conjunto1[],char conjunto2[], char c) que devuelve el carácter c codificado según los conjuntos 1 y 2 que se le pasan.
+        char[] conjunto1 = {'e', 'i', 'k', 'm', 'p', 'q', 'r', 's', 't', 'u', 'v'};
+        char[] conjunto2 = {'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's'};
     }
     
 }
