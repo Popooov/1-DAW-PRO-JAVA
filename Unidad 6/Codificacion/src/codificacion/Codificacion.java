@@ -1,6 +1,10 @@
 package codificacion;
 
 public class Codificacion {
+    
+    char codifica(char conjunto1[],char conjunto2[], char c) {
+        return 'c';
+    }
 
     public static void main(String[] args) {
         // Se dispone de la siguiente relación de letras:
