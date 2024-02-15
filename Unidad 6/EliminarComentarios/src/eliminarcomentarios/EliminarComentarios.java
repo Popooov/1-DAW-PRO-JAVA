@@ -1,35 +1,36 @@
 package eliminarcomentarios;
 
-public class EliminarComentarios {
-    
-//    public String eliminarComentarios (String sentencia) {
-//        
-//    }
+import java.util.Arrays;
 
-    public static void main(String[] args) {
-        // El preprocesador del lenguaje C elimina los comentarios (/*... */) del código fuente antes de compilar. 
-        // Diseña un programa que lea por teclado una sentencia en C, y elimine los comentarios.
-        // Sentencia:
-        // if (a==3) /* igual a tres */
-        //      a++; /* incrementamos a */
-        // Salida: if (a==3) a++;
-        char startOfComment, endOfComment = 0;
-        String sentencia = """
-                            if (a==3) /* igual a tres */
-                                a++; /* incrementamos a */""";
+public class EliminarComentarios {
+
+    static public String eliminarComentarios(String sentencia) {
+        String sentenciaSinComentarios = "";
         
-        for (int i = 0; i < sentencia.length(); i++) {
-            System.out.print(sentencia.charAt(i));
-            if (sentencia.charAt(i) == '/') {
-                startOfComment = (char) sentencia.indexOf('/');
-                System.out.println(startOfComment);
+        String[] splitted = sentencia.split("/");
+        String[] striped = new String[0];
+
+        for (String cadena : splitted) {
+            striped = Arrays.copyOf(striped, striped.length + 1);
+            striped[striped.length - 1] = cadena.strip();
+        }
+
+        for (String cadena : striped) {
+            if (!cadena.contains("*")) {
+                sentenciaSinComentarios += cadena + " ";
             }
         }
         
-//        System.out.println(startOfComment);
-        System.out.println(endOfComment);
-//        System.out.println(sentencia.indexOf('/'));
-//        System.out.println(sentencia.length());
+        return sentenciaSinComentarios;
     }
-    
+
+    public static void main(String[] args) {
+        String sentencia = """
+                            if (a==3) /* igual a tres */
+                                a++; /* incrementamos a */""";
+                
+        
+        System.out.println(eliminarComentarios(sentencia));
+    }
+
 }
