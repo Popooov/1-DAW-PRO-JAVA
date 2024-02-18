@@ -1,11 +1,16 @@
 package codificacion;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Codificacion {
     
-    char codifica(char conjunto1[],char conjunto2[], char c) {
-        return 'c';
+    static char codifica(char conjunto1[],char conjunto2[], char c) {
+        if (Arrays.binarySearch(conjunto1, c) >= 0) {
+            return conjunto2[Arrays.binarySearch(conjunto1, c)];
+        } else {
+            return c;
+        }
     }
 
     public static void main(String[] args) {
@@ -20,10 +25,20 @@ public class Codificacion {
         // char codifica(char conjunto1[],char conjunto2[], char c) que devuelve el carácter c codificado según los conjuntos 1 y 2 que se le pasan.
         char[] conjunto1 = {'e', 'i', 'k', 'm', 'p', 'q', 'r', 's', 't', 'u', 'v'};
         char[] conjunto2 = {'p', 'v', 'i', 'u', 'm', 't', 'e', 'r', 'k', 'q', 's'};
+        String textoCodificado = "";
         
-        System.out.println("Introduce un texto para codficar: ");
-        String sc = new Scanner(System.in).nextLine();
+        System.out.print("Introduce un texto para codificar: ");
+        char[] sc = new Scanner(System.in)
+                .nextLine()
+                .toLowerCase()
+                .toCharArray();
         
+        for (char c : sc) {
+            textoCodificado += codifica(conjunto1, conjunto2, c);
+            
+        }
+        
+        System.out.println("Texto codificado: " + textoCodificado);
     }
     
 }
