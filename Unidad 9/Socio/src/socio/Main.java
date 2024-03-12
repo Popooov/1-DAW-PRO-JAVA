@@ -1,6 +1,7 @@
 package socio;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +14,19 @@ public class Main {
         Arrays.sort(s, c1);
         System.out.println(Arrays.deepToString(s));
         
-        ComparaEdadesDecreciente cd1 = new ComparaEdadesDecreciente();
-        Arrays.sort(s, cd1);
+//        ComparaEdadesDecreciente cd1 = new ComparaEdadesDecreciente();
+//        Arrays.sort(s, cd1);
+//        System.out.println(Arrays.deepToString(s));
+        
+        Arrays.sort(s, new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
+                return ((Socio) o1).id - ((Socio) o2).id;
+            }
+        });
+        
+//        Arrays.sort(s, (Object o1, Object o2) -> ((Socio) o1).id - ((Socio) o2).id);
+        
         System.out.println(Arrays.deepToString(s));
     }
 }
