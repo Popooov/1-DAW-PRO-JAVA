@@ -9,7 +9,12 @@ public class Main {
         s[1] = new Socio(1, "Pablo", "13-03-1981");
         s[2] = new Socio(3, "Carlos", "24-08-1990");
         
-        Arrays.sort(s);
+        ComparaEdades c1 = new ComparaEdades();
+        Arrays.sort(s, c1);
+        System.out.println(Arrays.deepToString(s));
+        
+        ComparaEdadesDecreciente cd1 = new ComparaEdadesDecreciente();
+        Arrays.sort(s, cd1);
         System.out.println(Arrays.deepToString(s));
     }
 }
