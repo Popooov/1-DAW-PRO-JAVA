@@ -21,12 +21,15 @@ public class Main {
         Arrays.sort(s, cd1);
         System.out.println(Arrays.deepToString(s));
         
-        Arrays.sort(s, new Comparator() {
-            @Override
-            public int compare(Object o1, Object o2) {
-                return ((Socio) o1).id - ((Socio) o2).id;
-            }
-        });
+        ComparaNombres cn = new ComparaNombres();
+        Arrays.sort(s, cn);
+        
+//        Arrays.sort(s, new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                return ((Socio) o1).id - ((Socio) o2).id;
+//            }
+//        });
         
 //        Arrays.sort(s, (Object o1, Object o2) -> ((Socio) o1).id - ((Socio) o2).id);
         
