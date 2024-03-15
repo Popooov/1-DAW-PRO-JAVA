@@ -2,8 +2,8 @@ package supermercado;
 
 public class Detergente implements EsLiquido, ConDescuento {
 
-    String marca, tipoEnvase;
-    double precio,
+    private String marca, tipoEnvase;
+    private double precio,
             volumen,
             descuento;
 
