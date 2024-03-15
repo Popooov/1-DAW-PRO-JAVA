@@ -67,27 +67,17 @@ public class Detergente implements EsLiquido, ConDescuento {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Detergente:\n");
-        if (this.descuento == 0.0) {
-            sb.append(this.marca)
-                    .append(",\n")
-                    .append(this.precio)
-                    .append(" euros")
-                    .append(",\n")
-                    .append(this.tipoEnvase)
-                    .append(",\n")
-                    .append(this.volumen)
-                    .append(" litros");
-        } else {
-            sb.append(this.marca)
-                    .append(",\n")
-                    .append(this.precio)
-                    .append(" euros")
-                    .append(",\n")
-                    .append(this.tipoEnvase)
-                    .append(",\n")
-                    .append(this.volumen)
-                    .append(" litros")
-                    .append(",\n")
+        sb.append(this.marca)
+                .append(",\n")
+                .append(this.precio)
+                .append(" euros")
+                .append(",\n")
+                .append(this.tipoEnvase)
+                .append(",\n")
+                .append(this.volumen)
+                .append(" litros");
+        if (this.descuento != 0.0) {
+            sb.append(",\n")
                     .append("descuento: ")
                     .append(this.descuento)
                     .append(",\n")

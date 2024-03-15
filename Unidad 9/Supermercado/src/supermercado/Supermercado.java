@@ -6,8 +6,7 @@ public class Supermercado {
         Detergente d = new Detergente("Ariel", 10.0);
         d.setVolumen(1.0);
         d.setTipoEnvase("Plástico");
-        d.setDescuento(0.5);
-        d.getPrecioDescuento();
+//        d.setDescuento(0.5);
         System.out.println(d);
     }
 
