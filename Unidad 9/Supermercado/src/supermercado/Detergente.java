@@ -4,6 +4,7 @@ public class Detergente implements EsLiquido, ConDescuento {
 
     private String marca, tipoEnvase;
     private double precio,
+            precioDescuento,
             volumen,
             descuento;
 
@@ -60,21 +61,40 @@ public class Detergente implements EsLiquido, ConDescuento {
 
     @Override
     public double getPrecioDescuento() {
-        return this.precio - (this.precio * this.descuento);
+        return this.precioDescuento = this.precio - (this.precio * this.descuento);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Detergente:\n");
-        sb.append(this.marca)
-                .append(",\n")
-                .append(this.precio)
-                .append(",\n")
-                .append(this.tipoEnvase)
-                .append(",\n")
-                .append(this.volumen)
-                .append(",\n")
-                .append(this.descuento);
+        if (this.descuento == 0.0) {
+            sb.append(this.marca)
+                    .append(",\n")
+                    .append(this.precio)
+                    .append(" euros")
+                    .append(",\n")
+                    .append(this.tipoEnvase)
+                    .append(",\n")
+                    .append(this.volumen)
+                    .append(" litros");
+        } else {
+            sb.append(this.marca)
+                    .append(",\n")
+                    .append(this.precio)
+                    .append(" euros")
+                    .append(",\n")
+                    .append(this.tipoEnvase)
+                    .append(",\n")
+                    .append(this.volumen)
+                    .append(" litros")
+                    .append(",\n")
+                    .append("descuento: ")
+                    .append(this.descuento)
+                    .append(",\n")
+                    .append("precio con descuento: ")
+                    .append(this.precioDescuento)
+                    .append(" euros");
+        }
         return sb.toString();
     }
 
