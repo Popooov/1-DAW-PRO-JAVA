@@ -6,7 +6,7 @@ public class Detergente implements EsLiquido, ConDescuento {
     double precio,
             volumen,
             descuento;
-    
+
     public Detergente(String marca, double precio) {
         this.marca = marca;
         this.precio = precio;
@@ -61,6 +61,21 @@ public class Detergente implements EsLiquido, ConDescuento {
     @Override
     public double getPrecioDescuento() {
         return this.precio - (this.precio * this.descuento);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Detergente:\n");
+        sb.append(this.marca)
+                .append(",\n")
+                .append(this.precio)
+                .append(",\n")
+                .append(this.tipoEnvase)
+                .append(",\n")
+                .append(this.volumen)
+                .append(",\n")
+                .append(this.descuento);
+        return sb.toString();
     }
 
 }
