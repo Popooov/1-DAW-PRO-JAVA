@@ -1,8 +1,6 @@
 package futbol;
 
-import java.util.Objects;
-
-public class Futbolista {
+public class Futbolista implements Comparable {
 
     private String dni, nombre;
     private int edad, numeroGoles;
@@ -45,7 +43,7 @@ public class Futbolista {
     public void setNumeroGoles(int numeroGoles) {
         this.numeroGoles = numeroGoles;
     }
-    
+
     @Override
     public String toString() {
         return "Futbolista{" + "dni: " + dni + ", nombre: " + nombre + ", edad: " + edad + ", numeroGoles: " + numeroGoles + '}';
@@ -55,12 +53,17 @@ public class Futbolista {
     public boolean equals(Object obj) {
         boolean iguales = false;
         final Futbolista otro = (Futbolista) obj;
-        
+
         if (this.dni.equals(otro.dni)) {
             iguales = true;
         }
-        
+
         return iguales;
     }
-    
+
+    @Override
+    public int compareTo(Object o) {
+        return this.dni.compareTo(((Futbolista) o).dni);
+    }
+
 }
