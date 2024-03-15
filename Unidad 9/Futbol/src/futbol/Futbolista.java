@@ -46,7 +46,7 @@ public class Futbolista implements Comparable {
 
     @Override
     public String toString() {
-        return "Futbolista{" + "dni: " + dni + ", nombre: " + nombre + ", edad: " + edad + ", numeroGoles: " + numeroGoles + '}';
+        return "Futbolista{" + "dni: " + dni + ", nombre: " + nombre + ", edad: " + edad + ", numeroGoles: " + numeroGoles + '}' + "\n";
     }
 
     @Override
