@@ -6,6 +6,11 @@ public class Detergente implements EsLiquido, ConDescuento {
     double precio,
             volumen,
             descuento;
+    
+    public Detergente(String marca, double precio) {
+        this.marca = marca;
+        this.precio = precio;
+    }
 
     public String getMarca() {
         return marca;
