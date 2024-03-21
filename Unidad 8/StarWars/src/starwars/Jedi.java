@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class Jedi extends Personaje {
 
-    enum ColorSable {
+    protected enum ColorSable {
         VERDE, AZUL, AMARILLO, NARANJA, DORADO, BRONCE, PLATEADO, BLANCO
     };
-    String planeta;
-    boolean enamorado;
-    String[] bloqueados = new String[0];
-    String novie;
+    protected String planeta;
+    protected boolean enamorado;
+    protected String[] bloqueados = new String[0];
+    protected String novie;
 
     public Jedi(
             String nombre,
@@ -39,15 +39,15 @@ public class Jedi extends Personaje {
         this.enamorado = true;
     }
 
-    public void bloquear(String personaje) {
-        if (this.novie.equals(personaje)) {
+    public void bloquear(String nombre) {
+        if (this.novie.equals(nombre)) {
             this.novie = "";
             this.enamorado = false;
             this.bloqueados = Arrays.copyOf(this.bloqueados, this.bloqueados.length + 1);
-            this.bloqueados[this.bloqueados.length - 1] = personaje;
+            this.bloqueados[this.bloqueados.length - 1] = nombre;
         } else {
             this.bloqueados = Arrays.copyOf(this.bloqueados, this.bloqueados.length + 1);
-            this.bloqueados[this.bloqueados.length - 1] = personaje;
+            this.bloqueados[this.bloqueados.length - 1] = nombre;
         }
     }
 }
