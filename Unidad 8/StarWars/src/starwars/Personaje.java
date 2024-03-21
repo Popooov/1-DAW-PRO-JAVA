@@ -2,8 +2,7 @@ package starwars;
 
 public class Personaje {
 
-    protected String nombre;
-    protected String raza;
+    protected String nombre, raza;
     protected double fuerza;
     
     public Personaje(String nombre, String raza, double fuerza) {
