@@ -10,11 +10,9 @@ public class Aprendiz extends Jedi {
             String nombre,
             String raza,
             double fuerza,
-            String planeta,
-            boolean enamorado,
-            String novie
+            String planeta
     ) {
-        super(nombre, raza, fuerza, planeta, enamorado, novie);
+        super(nombre, raza, fuerza, planeta);
     }
 
     public void entrenar() {

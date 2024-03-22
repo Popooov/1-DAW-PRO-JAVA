@@ -24,9 +24,9 @@ public class Personaje {
         Personaje p1 = (Personaje) personaje1;
         Personaje p2 = (Personaje) personaje2;
         if (p1.fuerza > p2.fuerza) {
-            ganador = p1.nombre;
+            ganador = "Ganador " + p1.nombre;
         } else if(p1.fuerza < p2.fuerza) {
-            ganador = p2.nombre;
+            ganador = "Ganador " + p2.nombre;
         }
         
         return ganador;

@@ -7,8 +7,9 @@ public class Sith extends Personaje {
     protected String maestro;
     protected String[] jediAsesinados = new String[0];
 
-    public Sith(String nombre, String raza, double fuerza) {
+    public Sith(String nombre, String raza, double fuerza, String maestro) {
         super(nombre, raza, fuerza);
+        this.maestro = maestro;
     }
 
     public void matarJedi(String nombre) {

@@ -16,18 +16,10 @@ public class Jedi extends Personaje {
             String nombre,
             String raza,
             double fuerza,
-            String planeta,
-            boolean enamorado,
-            String novie
+            String planeta
     ) {
         super(nombre, raza, fuerza);
         this.planeta = planeta;
-        if (enamorado) {
-            this.enamorado = enamorado;
-            this.novie = novie;
-        } else {
-            this.enamorado = false;
-        }
     }
 
     public void usarLaFuerza() {
@@ -37,6 +29,7 @@ public class Jedi extends Personaje {
     public void enamorarse(String novie) {
         this.novie = novie;
         this.enamorado = true;
+        System.out.println(this.nombre + " está enamorado de " + novie);
     }
 
     public void bloquear(String nombre) {
